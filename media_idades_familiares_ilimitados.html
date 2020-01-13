@@ -1,0 +1,37 @@
+<script>
+
+    function pulaLinha() {
+    
+        document.write("<br>");
+        document.write("<br>");
+    
+    }
+    
+    function mostra(frase) {
+    
+        document.write(frase);
+        pulaLinha();
+    
+    }
+    debugger;
+    //var totalFamiliares = parseInt(prompt("Quantidade de familiares?"));
+    var totalIdades = 0;
+    var numero = 0;
+
+    do {
+        var idade = parseInt(prompt("Informe idade do familiar"));
+        totalIdades = totalIdades + idade;
+        numero++;
+
+        do {
+            var informarMaisUmFamiliares = prompt("Deseja informar um novo familiar? (S OU N)");
+        } while (informarMaisUmFamiliares != 'S' && informarMaisUmFamiliares != 'N');
+    } while ( informarMaisUmFamiliares == 'S');
+
+    var media = totalIdades/numero;
+
+    mostra(media); 
+    
+    mostra("FIM");
+    
+    </script>
